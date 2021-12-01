@@ -24,6 +24,7 @@ public class SearchResultActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
+        Init();
             Cursor adatok = adatbazis.listaz();
             if (adatok.getCount() == 0){
                 Toast.makeText(this, "Nincs az adatbázisban bejegyzés", Toast.LENGTH_SHORT).show();
@@ -43,19 +44,16 @@ public class SearchResultActivity extends AppCompatActivity {
                 Kiir.setText(bobTheBuilder.toString());
             }
 
-        Vissza.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent Kereses = new Intent(SearchResultActivity.this, MainActivity.class);
-                startActivity(Kereses);
-                finish();
-            }
+        Vissza.setOnClickListener(v -> {
+            Intent Insertre = new Intent(SearchResultActivity.this, MainActivity.class);
+            startActivity(Insertre);
+            finish();
         });
-            Init();
     };
 
     private void Init(){
         Vissza = findViewById(R.id.btnSearchVissza);
         Kiir = findViewById(R.id.txtSearchKiir);
+        adatbazis = new DBHelper(this);
     }
 }

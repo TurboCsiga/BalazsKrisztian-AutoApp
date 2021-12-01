@@ -63,5 +63,6 @@ public class InsertActivity extends AppCompatActivity {
         Uzemben = findViewById(R.id.txtInsUzemben);
         Felvesz = findViewById(R.id.btnInsFelvesz);
         Vissza = findViewById(R.id.btnInsVissza);
+        adatbazis = new DBHelper(this);
     }
 }

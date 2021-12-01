@@ -11,7 +11,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gyártó"
+        android:hint="Gyártó"
         android:id="@+id/txtInsGyarto"
         android:textAlignment="center"
         />
@@ -19,7 +19,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Modell"
+        android:hint="Modell"
         android:id="@+id/txtInsModell"
         android:textAlignment="center"
         />
@@ -27,7 +27,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Üzembe helyezés éve"
+        android:hint="Üzembe helyezés éve"
         android:id="@+id/txtInsUzemben"
         android:textAlignment="center"
         />
