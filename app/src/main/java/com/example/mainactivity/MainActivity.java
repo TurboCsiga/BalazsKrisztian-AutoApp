@@ -20,12 +20,15 @@ public class MainActivity extends AppCompatActivity {
 
         Init();
 
-        btnKeres.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent Kereses = new Intent(MainActivity.this, SearchResultActivity.class);
-
-            }
+        btnKeres.setOnClickListener(v -> {
+            Intent Kereses = new Intent(MainActivity.this, SearchResultActivity.class);
+            startActivity(Kereses);
+            finish();
+        });
+        btnUj.setOnClickListener(v -> {
+            Intent Insertre = new Intent(MainActivity.this, InsertActivity.class);
+            startActivity(Insertre);
+            finish();
         });
     }
 
